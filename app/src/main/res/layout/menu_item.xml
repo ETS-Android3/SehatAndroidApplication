@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundMain">
+
+
+    <ImageButton
+        android:id="@+id/menuClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:onClick="onClick"
+        android:scaleY="1.7"
+        android:scaleX="1.7"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_close"
+        android:tint="#5FC5BA" />
+
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/menuClose"
+        android:id="@+id/header"
+        android:src="@drawable/menu_illu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:id="@+id/item1"
+        android:onClick="onClick"
+        android:background="?attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:src="@drawable/menu_ico1" />
+
+        <TextView
+            android:id="@+id/item_text"
+            android:layout_gravity="center_vertical"
+            android:textColor="?attr/PrimaryText"
+            android:fontFamily="@font/semibold"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:textSize="@dimen/_13sdp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prevention" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:id="@+id/item2"
+        android:onClick="onClick"
+        >
+        <ImageView
+            android:id="@+id/item_icon2"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:src="@drawable/menu_ico2" />
+
+        <TextView
+            android:id="@+id/item_text2"
+            android:layout_gravity="center_vertical"
+            android:textColor="?attr/PrimaryText"
+            android:fontFamily="@font/semibold"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:textSize="@dimen/_13sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Helplines" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/item3"
+        android:onClick="onClick"
+        android:background="?attr/selectableItemBackground"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_icon3"
+            android:layout_width="wrap_content"
+
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_ico3" />
+
+        <TextView
+            android:id="@+id/item_text3"
+            android:layout_gravity="center_vertical"
+            android:textColor="?attr/PrimaryText"
+            android:fontFamily="@font/semibold"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:textSize="@dimen/_13sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About" />
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

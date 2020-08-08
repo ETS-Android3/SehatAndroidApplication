@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#010101</color>
+    <color name="colorAccent">#e43</color>
+    <color name="colorBackground">#f9f9fa</color>
+    <color name="colorTextSubtitle">#4e4e4e</color>
+    <color name="colorTextTitle">#262626</color>
+    <color name="deathColor">#FF6B6B</color>
+    <color name="darkColor">#313131</color>
+    <color name="recoveredColor">#5FC5BA</color>
+    <color name="BottomNavigationcolor">#ea474a</color>
+    <color name="backgroundMain">#FFF</color>
+    <color name="backgroundSecondary">#FFF</color>
+    <color name="BottomSelected">#5FC5BA</color>
+    <color name="BottomUnselected">#C9C9C9</color>
+    <color name="BottomNavColor">#F5F5F5</color>
+    <color name="PrimaryText">#010101</color>
+    <color name="PrimaryTextLight">#878787</color>
+    <color name="PrimaryTextLight2">#6A6A6A</color>
+    <color name="TabText2">#6A6A6A</color>
+    <color name="searchIconColor">#7A7A7A</color>
+    <color name="darkModeColor">#F5F5F5</color>
+    <color name="active">#73B1DA</color>
+    <color name="color3">#FF9C6B</color>
+    <color name="color4">#5FC599</color>
+</resources>

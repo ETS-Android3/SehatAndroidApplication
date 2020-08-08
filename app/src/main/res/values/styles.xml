@@ -1,0 +1,93 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+
+    </style>
+
+    <style name="Sehat_style" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#fff</item>
+        <item name="colorPrimaryDark">#010101</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundMain">#FFF</item>
+        <item name="backgroundSecondary">#FFF</item>
+        <item name="BottomSelected">#5FC5BA</item>
+        <item name="BottomUnselected">#C9C9C9</item>
+        <item name="BottomNavColor">#F5F5F5</item>
+        <item name="PrimaryText">#010101</item>
+        <item name="PrimaryTextLight">#878787</item>
+        <item name="PrimaryTextLight2">#6A6A6A</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="TabText2">#6A6A6A</item>
+        <item name="searchIconColor">#7A7A7A</item>
+        <item name="darkModeColor">#F5F5F5</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="Sehat_style_not" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#fff</item>
+        <item name="colorPrimaryDark">#010101</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundMain">#FFF</item>
+        <item name="backgroundSecondary">#FFF</item>
+        <item name="BottomSelected">#5FC5BA</item>
+        <item name="BottomUnselected">#C9C9C9</item>
+        <item name="BottomNavColor">#F5F5F5</item>
+        <item name="PrimaryText">#010101</item>
+        <item name="PrimaryTextLight">#878787</item>
+        <item name="PrimaryTextLight2">#6A6A6A</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="TabText2">#6A6A6A</item>
+        <item name="searchIconColor">#7A7A7A</item>
+        <item name="darkModeColor">#F5F5F5</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="Sehat_style_dark" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#313131</item>
+        <item name="colorPrimaryDark">#313131</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="backgroundMain">#313131</item>
+        <item name="backgroundSecondary">#414141</item>
+        <item name="BottomSelected">#5FC5BA</item>
+        <item name="BottomUnselected">#2C2C2C</item>
+        <item name="BottomNavColor">#414141</item>
+        <item name="PrimaryText">#F5F5F5</item>
+        <item name="PrimaryTextLight">#959595</item>
+        <item name="PrimaryTextLight2">#FFF</item>
+        <item name="TabText2">#A4A4A4</item>
+        <item name="darkModeColor">#525252</item>
+        <item name="searchIconColor">#898989</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/semibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">#5FC5BA</item>
+    </style>
+
+
+
+</resources>

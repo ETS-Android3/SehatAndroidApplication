@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/moreInfo"
+        android:icon="@drawable/globe_icon"
+       />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_icon"
+       />
+    <item
+        android:id="@+id/stats"
+        android:icon="@drawable/loc_bottom"
+        />
+
+
+</menu>

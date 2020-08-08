@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Sehat</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="about">Sehat is an application which provides real- time stats and updates related to COVID19, built by three high school students in India.</string>
+    <string name="news_info">The news articles are sourced from <b>The Guardian.</b></string>
+    <string name="theguardian_com"><u>theguardian.com</u></string>
+    <string name="statistics_info">The global statistics related to COVID19 are sourced from <b>the W.H.O, John Hopkins University and Covid19 India.</b></string>
+    <string name="who_int"><u>who.int</u></string>
+    <string name="coronavirus_jhu_edu"><u>coronavirus.jhu.edu</u></string>
+    <string name="covid19india_org"><u>covid19india.org</u></string>
+    <string name="prev1">Stay at home, especially if you feel unwell. Only go outside for essential activities, like buying groceries or seeing a doctor when you are unwell.</string>
+    <string name="prev2">Wash your hands often with soap and water or any other alcohol-based hand rub.</string>
+    <string name="prev3">Always cover your mouth and nose with your elbow or a tissue while coughing.</string>
+    <string name="prev4">Wear a face mask while going outside for essential activities and maintain a distance from anyone who is coughing.</string>
+    <string name="prev5">Avoid unnecessary interactions with other people and continue working from home.</string>
+    <string name="worldometers_info_coronavirus"><u>worldometers.info/coronavirus</u></string>
+    <string name="sehat_tracker_herokuapp_com"><u>sehat-tracker.herokuapp.com</u></string>
+
+
+</resources>

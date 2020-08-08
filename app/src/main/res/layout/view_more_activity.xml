@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TabsActivity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/appBarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/BottomNavColor"
+        android:minHeight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/backBt"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_arrow" />
+
+            <ImageButton
+                android:id="@+id/errorBt"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:visibility="gone"
+                android:src="@drawable/error_icon" />
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="center"
+        android:minHeight="0dp"
+        app:tabMode="fixed"
+        android:layout_gravity="center_horizontal"
+        app:tabSelectedTextColor="#5FC5BA"
+        android:id="@+id/tabLayout"
+        app:tabTextColor="?attr/PrimaryTextLight2"
+        app:tabIndicatorColor="#5FC5BA"
+        app:tabIndicatorHeight="@dimen/_3sdp"
+        app:tabTextAppearance="@style/tab_text"
+        android:background="?attr/BottomNavColor"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>
