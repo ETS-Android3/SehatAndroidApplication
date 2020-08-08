@@ -139,7 +139,7 @@ public class StatsFragment extends Fragment {
                 .url("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php")
                 .get()
                 .addHeader("x-rapidapi-host", "coronavirus-monitor.p.rapidapi.com")
-                .addHeader("x-rapidapi-key", "68151b38eamsh20fe03826d37f38p1638d8jsn94971d84bc83")
+                .addHeader("x-rapidapi-key", "YOUR-API-KEY")
                 .build();
 
         @Override
