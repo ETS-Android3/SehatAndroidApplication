@@ -45,7 +45,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class NewsHomeFragment extends Fragment {
 
-    public static String API_KEY = "834c67560f954b649141433f66a0b77e";
+    public static String API_KEY = "YOUR-API-KEY-FROM-RAPID-API";
     private List<Article> articles = new ArrayList<>();
     private HeightWrappingViewPager viewPager;
     private NewsAdapter adapter;

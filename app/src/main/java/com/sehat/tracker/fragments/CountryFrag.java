@@ -84,7 +84,7 @@ public class CountryFrag extends Fragment {
                 .url("https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_iso_alpha_3.php?alpha3=" + CountryCode)
                 .get()
                 .addHeader("x-rapidapi-host", "coronavirus-monitor.p.rapidapi.com")
-                .addHeader("x-rapidapi-key", "68151b38eamsh20fe03826d37f38p1638d8jsn94971d84bc83")
+                .addHeader("x-rapidapi-key", "YOUR-API-KEY")
                 .build();
 
 
