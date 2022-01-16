@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -161,6 +162,7 @@ public class StatsFragment extends Fragment {
             super.onPostExecute(s);
             if (s != null) {
                 try {
+
                     JSONObject jsonObject = new JSONObject(s);
                     intialisedata(jsonObject);
                 } catch (JSONException e) {

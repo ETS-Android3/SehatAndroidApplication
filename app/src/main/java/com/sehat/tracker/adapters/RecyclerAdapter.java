@@ -44,22 +44,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         TabData model = tabData.get(position);
 
         if (model.getCountryName().equals("USA"))
-            Picasso.get().load("https://www.countryflags.io/us/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/us").placeholder(R.drawable.globe).into(holder.flag);
         else if (model.getCountryName().equals("UK"))
-            Picasso.get().load("https://www.countryflags.io/gb/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/gb").placeholder(R.drawable.globe).into(holder.flag);
         else if (model.getCountryName().equals("S. Korea"))
-            Picasso.get().load("https://www.countryflags.io/kr/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/kr").placeholder(R.drawable.globe).into(holder.flag);
         else if (model.getCountryName().equals("UAE"))
-            Picasso.get().load("https://www.countryflags.io/ae/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/ae").placeholder(R.drawable.globe).into(holder.flag);
         else if (model.getCountryName().equals("Macao"))
-            Picasso.get().load("https://www.countryflags.io/mo/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/mo").placeholder(R.drawable.globe).into(holder.flag);
         else if (model.getCountryName().equals("Myanmar"))
-            Picasso.get().load("https://www.countryflags.io/mm/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/mm").placeholder(R.drawable.globe).into(holder.flag);
 
         else if (!getCountryCode(model.getCountryName()).isEmpty())
-            Picasso.get().load("https://www.countryflags.io/" + getCountryCode(model.getCountryName()).toLowerCase() + "/flat/64.png").into(holder.flag);
+            Picasso.get().load("https://countryflagsapi.com/png/"+ getCountryCode(model.getCountryName()).toLowerCase()).placeholder(R.drawable.globe).into(holder.flag);
         else
             holder.flag.setImageResource(R.drawable.globe);
+
 
         holder.name.setText(model.getCountryName());
         holder.cases.setText(model.getTotalCases());

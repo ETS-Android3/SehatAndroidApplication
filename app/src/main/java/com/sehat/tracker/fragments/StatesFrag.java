@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Iterator;
 
 import io.paperdb.Paper;
 import okhttp3.OkHttpClient;
@@ -45,6 +47,7 @@ public class StatesFrag extends Fragment {
     SharedPreferences stateDataSh;
     SharedPreferences.Editor editor;
     String todayDate;
+    ProgressBar progressBar;
     double diff,diffHours;
 
     @Nullable
@@ -52,6 +55,7 @@ public class StatesFrag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = getLayoutInflater().inflate(R.layout.states_frag,container,false);
         recyclerView = rootView.findViewById(R.id.recyclerView);
+        progressBar = rootView.findViewById(R.id.progressBar);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
@@ -82,6 +86,7 @@ public class StatesFrag extends Fragment {
             }
             else {
                 //  Toast.makeText(getContext(),"Old Data loaded",Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
                 adapter = new StateAdapter(Paper.book().read("StateArray", new ArrayList<>()),getActivity());
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
@@ -101,8 +106,10 @@ public class StatesFrag extends Fragment {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("https://api.covid19india.org/data.json")
-                .method("GET", null)
+                .url("https://covid-19-india2.p.rapidapi.com/details.php")
+                .get()
+                .addHeader("x-rapidapi-host", "covid-19-india2.p.rapidapi.com")
+                .addHeader("x-rapidapi-key", "68151b38eamsh20fe03826d37f38p1638d8jsn94971d84bc83")
                 .build();
 
 
@@ -125,7 +132,6 @@ public class StatesFrag extends Fragment {
             super.onPostExecute(s);
             if (s != null) {
                 try {
-
                     JSONObject jsonObject = new JSONObject(s);
                     intialisedata(jsonObject);
                 } catch (JSONException e) {
@@ -133,6 +139,7 @@ public class StatesFrag extends Fragment {
                 }
             }
             else {
+                progressBar.setVisibility(View.GONE);
                 Toast.makeText(getContext(), "No response", Toast.LENGTH_SHORT).show();
                 Dialog d = new Dialog(getActivity());
                 d.setContentView(R.layout.custom_dialog_error);
@@ -151,24 +158,27 @@ public class StatesFrag extends Fragment {
     }
 
     private void intialisedata(JSONObject jsonObject) {
+        progressBar.setVisibility(View.GONE);
         JSONArray jsonArray = null;
         String name,total,active,recov,dead,newdead,newrecover,newcase;
         JSONObject object;
+        Iterator<String> keys = jsonObject.keys();
+
         try {
-            jsonArray = jsonObject.getJSONArray("statewise");
-            for(int i=1;i<jsonArray.length();i++){
+            while(keys.hasNext()) {
+                String key = keys.next();
+                object = jsonObject.getJSONObject(key);
+//                object = jsonArray.getJSONObject(i);
+//                name = object.getString("state");
+//                total = object.getString("confirmed");
+//                active = object.getString("active");
+//                recov = object.getString("recovered");
+//                dead = object.getString("deaths");
+//                newcase = object.getString("deltaconfirmed");
+//                newdead = object.getString("deltadeaths");
+//                newrecover = object.getString("deltarecovered");
 
-                object = jsonArray.getJSONObject(i);
-                name = object.getString("state");
-                total = object.getString("confirmed");
-                active = object.getString("active");
-                recov = object.getString("recovered");
-                dead = object.getString("deaths");
-                newcase = object.getString("deltaconfirmed");
-                newdead = object.getString("deltadeaths");
-                newrecover = object.getString("deltarecovered");
-
-                stateData.add(new StateData(name,total,dead,recov,active,newcase,newrecover,newdead));
+                stateData.add(new StateData( object.getString("state"),object.getString("confirm"),object.getString("death"),object.getString("cured"),"0","0","0","0"));
             }
 
 

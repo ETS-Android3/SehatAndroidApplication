@@ -23,6 +23,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.byteowls.jopencage.JOpenCageGeocoder;
+import com.byteowls.jopencage.model.JOpenCageForwardRequest;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -129,6 +131,14 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback {
         }else
             new LoadStats().execute();
 
+        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder("5597096c3df6410ea9adb7b3ecb67370");
+        JOpenCageForwardRequest request = new JOpenCageForwardRequest("");
+        request.setRestrictToCountryCode("za"); // restrict results to a specific country
+        request.setBounds(18.367, -34.109, 18.770, -33.704); // restrict results to a geographic bounding box (southWestLng, southWestLat, northEastLng, northEastLat)
+
+        JOpenCageResponse response = jOpenCageGeocoder.forward(request);
+        JOpenCageLatLng firstResultLatLng = response.getFirstPosition(); // get the coordinate pair of the first result
+        System.out.println(firstResultLatLng.getLat().toString() + "," + firstResultLatLng.getLng().toString());
 
         return view;
     }
@@ -282,16 +292,22 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback {
         protected void onPostExecute(JSONArray s) {
             super.onPostExecute(s);
             if (s!= null && s.length()>0) {
-                    initialiseMap(s);
-                apiDataEditor.putString("Date",todayDate);
-                apiDataEditor.putString("MapData",s.toString());
-                apiDataEditor.apply();
+//                Dialog d = new Dialog(getActivity());
+//                d.setContentView(R.layout.custom_dialog_error);
+//                d.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                  d.show();
+                //   TabsActivity.error.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
+              //      initialiseMap(s);
+//                apiDataEditor.putString("Date",todayDate);
+//                apiDataEditor.putString("MapData",s.toString());
+//                apiDataEditor.apply();
             }else {
-                Dialog d = new Dialog(getActivity());
-                d.setContentView(R.layout.custom_dialog_error);
-                d.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                d.show();
-                TabsActivity.error.setVisibility(View.VISIBLE);
+//                Dialog d = new Dialog(getActivity());
+//                d.setContentView(R.layout.custom_dialog_error);
+//                d.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+             //   d.show();
+             //   TabsActivity.error.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.GONE);
                 if(apiData.getString("MapData",null)!=null)
                 try {

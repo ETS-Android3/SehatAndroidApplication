@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
-        android:weightSum="5"
+        android:weightSum="4"
         android:layout_marginBottom="@dimen/_5sdp"
         android:orientation="horizontal">
 
@@ -19,7 +19,7 @@
             android:text="West Bengal"
             android:layout_weight="1"
             android:id="@+id/name"
-            android:textSize="@dimen/_9sdp"
+            android:textSize="@dimen/_10sdp"
             android:textColor="?attr/PrimaryText"
             android:textAlignment="center"
             android:fontFamily="@font/medium"
@@ -36,9 +36,9 @@
             android:paddingStart="@dimen/_2sdp"
             android:paddingEnd="@dimen/_2sdp"
             android:id="@+id/total"
-            android:textColor="?attr/PrimaryText"
+            android:textColor="#73B1DA"
 
-            android:textSize="@dimen/_9sdp"
+            android:textSize="@dimen/_10sdp"
             android:textAlignment="center"
 
             android:fontFamily="@font/medium"
@@ -51,28 +51,13 @@
             android:textColor="#73CCC2"
             android:paddingStart="@dimen/_2sdp"
             android:paddingEnd="@dimen/_2sdp"
-            android:textSize="@dimen/_9sdp"
+            android:textSize="@dimen/_10sdp"
             android:id="@+id/recovered"
             android:textAlignment="center"
 
             android:fontFamily="@font/medium"
             />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="4,050"
-            android:textColor="#73B1DA"
 
-            android:layout_weight="1"
-            android:paddingStart="@dimen/_2sdp"
-            android:paddingEnd="@dimen/_2sdp"
-            android:id="@+id/active"
-
-            android:textSize="@dimen/_9sdp"
-            android:textAlignment="center"
-
-            android:fontFamily="@font/medium"
-            />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -82,7 +67,7 @@
             android:paddingStart="@dimen/_2sdp"
             android:paddingEnd="@dimen/_2sdp"
             android:id="@+id/deaths"
-            android:textSize="@dimen/_9sdp"
+            android:textSize="@dimen/_10sdp"
             android:textAlignment="center"
             android:fontFamily="@font/medium"
             />

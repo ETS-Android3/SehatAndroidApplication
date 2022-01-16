@@ -158,7 +158,6 @@ public class SplashScreen extends AppCompatActivity implements LocationListener 
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-
                     final Intent launchIntent = new Intent(SplashScreen.this, MainActivity.class);
                     launchIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     launchIntent.putExtra("Code", countryCode);

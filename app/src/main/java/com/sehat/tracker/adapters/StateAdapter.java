@@ -49,7 +49,7 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.MyViewHolder
             holder.recover.setText(model.getTotalRecovered());
         else
             holder.recover.setText(model.getTotalRecovered()+" +" + model.getNewRecovered());
-        holder.active.setText(model.getActiveCases());
+       // holder.active.setText(model.getActiveCases());
         if(model.getNewDeaths().equals("0"))
             holder.death.setText(model.getTotalDeaths());
         else
@@ -74,7 +74,6 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.MyViewHolder
            name = itemView.findViewById(R.id.name);
            total = itemView.findViewById(R.id.total);
            recover = itemView.findViewById(R.id.recovered);
-           active = itemView.findViewById(R.id.active);
            death = itemView.findViewById(R.id.deaths);
         }
     }
